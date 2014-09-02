@@ -1,0 +1,12 @@
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\jonathanwalton720.Lib.dll
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\jonathanwalton720.Lib.pdb
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\Newtonsoft.Json.dll
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\Newtonsoft.Json.xml
+D:\git\jonathanwalton720\jonathanwalton720.Lib\obj\Release\jonathanwalton720.Lib.csprojResolveAssemblyReference.cache
+D:\git\jonathanwalton720\jonathanwalton720.Lib\obj\Release\jonathanwalton720.Lib.dll
+D:\git\jonathanwalton720\jonathanwalton720.Lib\obj\Release\jonathanwalton720.Lib.pdb
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\jonathanwalton720.Lib.dll.config
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\EntityFramework.dll
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\EntityFramework.xml
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\EntityFramework.SqlServer.dll
+D:\git\jonathanwalton720\jonathanwalton720.Lib\bin\Release\EntityFramework.SqlServer.xml

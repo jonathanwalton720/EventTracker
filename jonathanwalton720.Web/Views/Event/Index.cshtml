@@ -1,0 +1,90 @@
+﻿@model jonathanwalton720.Web.Models.UserContext
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    @if (Model.IsLoggedIn)
+    {
+        <a href="/Profile/LogOut" class="pull-right" role="button" data-toggle="modal">Log Out</a>
+    }
+    else
+    {
+        <a href="#loginModal" class="pull-right" role="button" data-toggle="modal">Log In</a>
+    }
+
+    <h1 class="bg-primary">Event Tracker</h1>
+</div>
+<div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var e in Model.Events)
+            {
+                <div class="bs-callout bs-callout-info col-xs-4 text-nowrap text-overflow">
+                    <h4 class="">
+                        <a href="#@e.GetHashCode()-Modal" role="button" data-toggle="modal">@e.Title.ToUpper()</a><br />
+                        <small>@e.StartTime.ToString("M/d/yyyy h:mm tt")</small>
+                    </h4>
+                    <address>
+                        <strong>@e.VenueName</strong><br />
+                        @e.VenueAddress<br />
+                        @e.CityName, @e.RegionName @e.PostalCode
+                    </address>
+                </div>
+                <div id="@e.GetHashCode()-Modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">@e.Title.ToUpper() <small class="pull-right">@e.StartTime.ToString("M/d/yyyy h:mm tt")</small></h4>
+                            </div>
+                            <div class="modal-body">
+                                <pre>@e.Description</pre>
+                            </div>
+                            <div class="modal-footer">
+                                @if (Model.IsLoggedIn)
+	                            {
+		                            <span>Have you attended this event? <button type="button" class="btn btn-primary btn-xs" role="button">Yes</button></span>
+	                            }
+                                else
+                                {
+                                    <span>You must be logged in to track your events.</span>
+                                }
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+    @using (Html.BeginForm("Submit", "Profile"))
+    {
+    <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-right">
+                            @Html.Label("username")<br />
+                            @Html.Label("password")
+                        </div>
+                        <div class="col-md-8">
+                            @Html.TextBox("username")<br />
+                            @Html.Password("password")
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    No account? Enter a username and password. <button id="login" class="btn btn-primary btn-xs" type="submit">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
