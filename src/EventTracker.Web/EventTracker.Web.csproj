@@ -264,9 +264,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventTracker.Lib\EventTracker.Lib.csproj">
+    <ProjectReference Include="..\EventTracker.Model\EventTracker.Model.csproj">
       <Project>{48e7ec17-9891-4406-ab06-7442c03e4df1}</Project>
-      <Name>EventTracker.Lib</Name>
+      <Name>EventTracker.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
