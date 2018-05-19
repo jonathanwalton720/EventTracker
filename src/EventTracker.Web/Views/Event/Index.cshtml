@@ -1,4 +1,4 @@
-﻿@model jonathanwalton720.Web.Models.UserContext
+﻿@model EventTracker.Web.Models.UserContext
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +21,14 @@
         <div class="row">
             @foreach (var e in Model.Events)
             {
-                <div class="bs-callout bs-callout-info col-xs-4 text-nowrap text-overflow">
+                <div class="bs-callout bs-callout-info col-sm-4 text-nowrap text-overflow">
+				<!--
+					<event-title 
+						title="@e.Title.ToUpper()"
+						hash="@e.GetHashCode()"
+						date="@e.StartTime.ToString("M/d/yyyy h:mm tt")">
+					</event-title>
+				-->
                     <h4 class="">
                         <a href="#@e.GetHashCode()-Modal" role="button" data-toggle="modal">@e.Title.ToUpper()</a><br />
                         <small>@e.StartTime.ToString("M/d/yyyy h:mm tt")</small>

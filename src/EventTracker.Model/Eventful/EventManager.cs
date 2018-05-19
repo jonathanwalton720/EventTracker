@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using System.Text;
 using System.IO;
 
-namespace jonathanwalton720.Lib
+namespace EventTracker.Model
 {
     public static class EventManager
     {

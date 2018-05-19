@@ -1,18 +1,18 @@
-namespace jonathanwalton720.Lib.Migrations
+namespace EventTracker.Model.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<jonathanwalton720.Lib.Data.EntityContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EventTracker.Model.Data.EntityContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(jonathanwalton720.Lib.Data.EntityContext context)
+        protected override void Seed(EventTracker.Model.Data.EntityContext context)
         {
             //  This method will be called after migrating to the latest version.
 

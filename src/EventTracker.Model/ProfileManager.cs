@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
-using jonathanwalton720.Lib.Data;
+using EventTracker.Model.Data;
 
-namespace jonathanwalton720.Lib
+namespace EventTracker.Model
 {
     public static class ProfileManager
     {

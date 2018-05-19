@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace jonathanwalton720.Web
+namespace EventTracker.Web
 {
     public class FilterConfig
     {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace jonathanwalton720.Lib.Data
+namespace EventTracker.Model.Data
 {
     using System;
     using System.Data.Entity;

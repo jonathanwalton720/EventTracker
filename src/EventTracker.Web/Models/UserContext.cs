@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using jonathanwalton720.Lib;
-using jonathanwalton720.Lib.Data;
+using EventTracker.Model;
+using EventTracker.Model.Data;
 
-namespace jonathanwalton720.Web.Models
+namespace EventTracker.Web.Models
 {
     public class UserContext
     {

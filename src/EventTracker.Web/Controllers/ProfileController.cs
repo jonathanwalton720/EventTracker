@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using jonathanwalton720.Lib;
-using jonathanwalton720.Lib.Data;
+using EventTracker.Model;
+using EventTracker.Model.Data;
 
-namespace jonathanwalton720.Web.Controllers
+namespace EventTracker.Web.Controllers
 {
     public class ProfileController : Controller
     {
