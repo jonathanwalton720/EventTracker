@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container">
+@*<div class="container">
     @if (Model.IsLoggedIn)
     {
         <a href="/Profile/LogOut" class="pull-right" role="button" data-toggle="modal">Log Out</a>
@@ -15,31 +15,23 @@
     }
 
     <h1 class="bg-primary">Event Tracker</h1>
-</div>
-<div class="container">
-    <div class="container-fluid">
-        <div class="row">
+</div>*@
+
+        <div id="events">
             @foreach (var e in Model.Events)
             {
-                <div class="bs-callout bs-callout-info col-sm-4 text-nowrap text-overflow">
-				<!--
-					<event-title 
-						title="@e.Title.ToUpper()"
-						hash="@e.GetHashCode()"
-						date="@e.StartTime.ToString("M/d/yyyy h:mm tt")">
-					</event-title>
-				-->
-                    <h4 class="">
-                        <a href="#@e.GetHashCode()-Modal" role="button" data-toggle="modal">@e.Title.ToUpper()</a><br />
-                        <small>@e.StartTime.ToString("M/d/yyyy h:mm tt")</small>
-                    </h4>
-                    <address>
-                        <strong>@e.VenueName</strong><br />
-                        @e.VenueAddress<br />
-                        @e.CityName, @e.RegionName @e.PostalCode
-                    </address>
-                </div>
-                <div id="@e.GetHashCode()-Modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+				<event-card 
+					title="@e.Title.ToUpper()"
+					hash="@e.GetHashCode()"
+					date="@e.StartTime.ToString("M/d/yyyy h:mm tt")"
+                    venue="@e.VenueName"
+                    address1="@e.VenueAddress"
+                    address2="@e.CityName, @e.RegionName @e.PostalCode" >
+                    @e.Description
+				</event-card>
+
+                @*<div id="@e.GetHashCode()-Modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -61,12 +53,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             }
         </div>
+        @*</div>
 
-    </div>
-    @using (Html.BeginForm("Submit", "Profile"))
+    </div>*@
+
+
+    @*@using (Html.BeginForm("Submit", "Profile"))
     {
     <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -94,4 +89,4 @@
         </div>
     </div>
     }
-</div>
+</div>*@

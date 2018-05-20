@@ -1,0 +1,67 @@
+﻿<link rel="import" href="/bower_components/paper-card/paper-card.html">
+<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+
+<dom-module id="event-card">
+    <template>
+        <style>
+            paper-card {
+                padding: 0 5px 5px;
+                width:500px;
+                height: 200px;
+                margin: 10px;
+            }
+            .sub-heading {
+                padding: 16px;
+                font: italic 12px arial, verdana;
+            }
+        </style>
+        <paper-card on-click="toggleShow">
+            <div class="heading">[[title]]</div>
+            <div class="sub-heading">[[date]]</div>
+            <address>
+                <strong>[[venue]]</strong><br />
+                [[address1]]<br />
+                [[address2]]
+            </address>
+            <paper-dialog id="dialog">
+              <h2>[[title]]</h2>
+              <paper-dialog-scrollable>
+                <slot></slot>
+              </paper-dialog-scrollable>
+              <div>
+                <paper-button on-click="toggleHide">Cancel</paper-button>
+              </div>
+            </paper-dialog>
+        </paper-card>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'event-card',
+            properties: {
+                title: {
+                    type: String
+                },
+                date: {
+                    type: String
+                },
+                venue: {
+                    type: String
+                },
+                address1: {
+                    type: String
+                },
+                address2: {
+                    type: String
+                }
+            },
+            toggleShow: function () {
+                this.$.dialog.toggle();
+            },
+            toggleHide: function () {
+                this.$.dialog.hide();
+            }
+        });
+    </script>
+</dom-module>

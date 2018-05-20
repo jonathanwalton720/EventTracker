@@ -1,0 +1,24 @@
+{
+  "name": "event-tracker",
+  "version": "1.0.0",
+  "description": "Tracking events using Polymer and ASP.NET",
+  "main": "index.js",
+  "author": "jonathanwalton720@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "eslint.packageManager": "yarn",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack -w --mode development"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "css-loader": "^0.28.11",
+    "sass-loader": "^7.0.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
